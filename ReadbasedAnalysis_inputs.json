@@ -5,16 +5,16 @@
     "centrifuge": true
   },
   "ReadbasedAnalysis.db": {
-    "gottcha2": "/global/cfs/projectdirs/m3408/aim2/database/gottcha2/RefSeq-r90.cg.BacteriaArchaeaViruses.species.fna",
-    "kraken2": "/global/cfs/projectdirs/m3408/aim2/database/kraken2/",
-    "centrifuge": "/global/cfs/projectdirs/m3408/aim2/database/centrifuge/p_compressed"
+    "gottcha2": "/refdata/nmdc/gottcha2/RefSeq-r90.cg.BacteriaArchaeaViruses.species.fna",
+    "kraken2": "/refdata/nmdc/kraken2/",
+    "centrifuge": "/refdata/nmdc/centrifuge/p_compressed"
   },
   "ReadbasedAnalysis.reads": [
-    "/path/to/SRR7877884.1.fastq.gz",
-    "/path/to/SRR7877884.2.fastq.gz"
+    "/global/cscratch1/sd/jfroula/JAWS/NMDC-tests/metaG/results/call-split_interleaved_fastq/cacheCopy/execution/input.left.fastq.gz",
+    "/global/cscratch1/sd/jfroula/JAWS/NMDC-tests/metaG/results/call-split_interleaved_fastq/cacheCopy/execution/input.right.fastq.gz"
   ],
   "ReadbasedAnalysis.paired": true,
   "ReadbasedAnalysis.prefix": "SRR7877884",
-  "ReadbasedAnalysis.outdir": "/global/cfs/projectdirs/m3408/aim2/metagenome/ReadbasedAnalysis/SRR7877884",
+  "ReadbasedAnalysis.outdir": "SRR7877884",
   "ReadbasedAnalysis.cpu": 8
 }

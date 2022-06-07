@@ -7,7 +7,7 @@ workflow ReadbasedAnalysis {
     Int cpu
     String prefix
     String? outdir
-    Boolean? paired = false
+    Boolean paired = false
     #String? docker = "microbiomedata/nmdc_taxa_profilers:1.0.2"
     String docker = "microbiomedata/nmdc_taxa_profilers@sha256:a56c3b2978869dd26e98daeb60ca9f2432dedb11c191cd3b0316a1827956c3a2"
 
@@ -74,6 +74,7 @@ workflow ReadbasedAnalysis {
         File? kraken2_classification_tsv = profilerKraken2.classification_tsv
         File? kraken2_report_tsv = profilerKraken2.report_tsv
         File? kraken2_krona_html = profilerKraken2.krona_html
+        Array[File]? fastq_files = make_outputs.fastq_files
 #        File summary_json = generateSummaryJson.summary_json
     }
 
@@ -86,7 +87,7 @@ workflow ReadbasedAnalysis {
 
 
 task make_outputs{
-    String outdir
+    String outdir = "readbased-output"
     File? gottcha2_report_tsv
     File? gottcha2_full_tsv
     File? gottcha2_krona_html
@@ -115,6 +116,6 @@ task make_outputs{
         cpu:  1
     }
     output{
-        Array[String] fastq_files = glob("${outdir}/*.fastq*")
+        Array[File] fastq_files = glob("${outdir}/*.fastq*")
     }
 }
